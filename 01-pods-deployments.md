@@ -53,6 +53,30 @@ It will be covered in a later exercise, but it's mentioned and shown above for c
 
  First use the following command to create a `service` for your `deployment`:
  ```shell
+ $ kubectl expose deployment multitool --port 80 --type LoadBalancer
+ service/multitool exposed
+ ```
+
+ Get the `service` called `multitool` and note down the External IP:
+
+```shell
+ $ kubectl get service multitool --watch
+ NAME        TYPE          CLUSTER-IP      EXTERNAL-IP      PORT(S)        AGE
+ multitool   LoadBalancer  10.96.223.218   <pending>        80:32458/TCP   12s
+```
+
+ Since your `service` is of type `LoadBalancer` it will be exposed on a public IP address
+using a LoadBalancer resource of the cloud provider. To access the service, note the external
+IP and point your web browser to the URL `http://<EXTERNAL-IP>`. Alternatively, if you
+ use e.g. curl from within the training infrastructure, you should use the <INTERNAL-IP>
+ address.
+
+### Access deployment via NodePort service
+
+(Skip if you are using an AKS-based cluster)
+
+ First use the following command to create a `service` for your `deployment`:
+ ```shell
  $ kubectl expose deployment multitool --port 80 --type NodePort
  service/multitool exposed
  ```
