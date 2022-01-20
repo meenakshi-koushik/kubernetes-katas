@@ -157,7 +157,7 @@ This port is a **NodePort** exposed on the worker nodes. So now, if we know the 
 
 #### Tasks
 
-Our nginx service is still not reachable from outside, so now we re-create this service as NodePort.
+Our nginx service is still not reachable from outside, so now we re-create this service as NodePort or LoadBalancer.
 
 * Change the type from `ClusterIP` to `NodePort` in `service-discovery-loadbalancing/nginx-svc.yaml`
 * Apply the new version of the service with `kubectl apply -f service-discovery-loadbalancing/nginx-svc.yaml`
