@@ -155,6 +155,7 @@ A service type NodePort creates a port on the service that is reachable from the
 
 This port is a **NodePort** exposed on the worker nodes. So now, if we know the IP of our nodes, we can access this service from the internet.
 
+(skip tasks section if you are using an AKS-based cluster)
 #### Tasks
 
 Our nginx service is still not reachable from outside, so now we re-create this service as NodePort or LoadBalancer.

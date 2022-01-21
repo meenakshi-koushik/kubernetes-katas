@@ -244,4 +244,5 @@ Delete the `nginx` and `multitool` deployments:
 ```shell
 $ kubectl delete deployment nginx
 $ kubectl delete deployment multitool
+$ kubectl delete service multitool
 ```
