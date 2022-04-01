@@ -6,7 +6,7 @@ metadata:
     app: nginx
   name: nginx
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: nginx
@@ -17,8 +17,14 @@ spec:
       labels:
         app: nginx
     spec:
+      volumes:
+      - name: data
+        emptyDir: {}
       containers:
       - image: nginx:1.7.9
         name: nginx
         resources: {}
+        volumeMounts:
+        - name: data
+          mountPath: /usr/share/nginx/html
 status: {}

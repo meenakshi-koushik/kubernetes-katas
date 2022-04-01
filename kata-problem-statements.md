@@ -1,6 +1,6 @@
 # Problem Statements
 
-1. Check kubectl installation (find its version) and access to cluster. How many nodes/ pods/ deployments/ services/ configmaps/ secrets/ serviceaccounts/ roles are there ?
+1. Check kubectl installation (find its version, setup completion) and access to cluster. How many nodes/ pods/ deployments/ services/ configmaps/ secrets/ serviceaccounts/ roles are there ?
 2. Beginner exercise: do the challenges in [01-pods-deployments.md](01-pods-deployments.md)
 3. Beginner exercise (optional): do the challenges in [02-service-discovery-and-loadbalancing.md](02-service-discovery-and-loadbalancing.md)
 4. Create nginx deployment with 3 replicas. Expose via a service of type load balancer and check you can access it from the web browser.
